@@ -1,10 +1,11 @@
 import express from "express";
 import http from "http";
-import dotenv from "dotenv";
+import cors from "cors";
 // setup the dotenv configuration
-import * as routes from "./routes/index";
+import dotenv from "dotenv";
 // use default .env file on development
 dotenv.config();
+import * as routes from "./routes/index";
 
 
 // Create server instance
@@ -13,6 +14,7 @@ const server = http.createServer(app);
 
 
 // General middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
