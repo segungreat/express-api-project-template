@@ -29,6 +29,12 @@ app.use("/api/welcome", routes.welcomeRoute);
 app.use("/api/", routes.welcomeRoute);
 
 
+// 404 page handler 
+app.use(middlewares.common.notFoundPage)
+// Error handler middleware
+app.use(middlewares.common.errorHandler)
+
+
 
 export default server;
 
