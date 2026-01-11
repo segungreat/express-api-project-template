@@ -1,6 +1,10 @@
 import express from "express";
 import http from "http";
+import dotenv from "dotenv";
+// setup the dotenv configuration
 import * as routes from "./routes/index";
+// use default .env file on development
+dotenv.config();
 
 
 // Create server instance
