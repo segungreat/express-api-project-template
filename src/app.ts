@@ -5,6 +5,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 // use default .env file on development
 dotenv.config();
+
+import * as middlewares from "./middlewares/index";
 import * as routes from "./routes/index";
 
 
@@ -17,6 +19,9 @@ const server = http.createServer(app);
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
+// Custom middlewares
+app.use(middlewares.common.setBaseUrl)
 
 // Routes
 app.use("/api/welcome", routes.welcomeRoute);
