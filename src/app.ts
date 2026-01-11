@@ -21,7 +21,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // Custom middlewares
-app.use(middlewares.common.setBaseUrl)
+app.use(middlewares.common.setBaseUrl);
+app.use(middlewares.common.bodyLogger);
 
 // Routes
 app.use("/api/welcome", routes.welcomeRoute);
