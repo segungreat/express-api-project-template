@@ -4,6 +4,7 @@ import cors from "cors";
 import morgan from "morgan";
 import {createStream} from "rotating-file-stream"; // For rotating log file daily
 import path from "path";
+import {slowDown} from "express-slow-down";
 // setup the dotenv configuration
 import dotenv from "dotenv";
 // use default .env file on development
@@ -18,7 +19,25 @@ const app: express.Express = express();
 const server = http.createServer(app);
 
 
+/**
+	 * So:
+	 *
+	 * - requests 1-60 are not delayed.
+	 * - request 61 is delayed by 6100ms
+	 * - request 62 is delayed by 6200ms
+	 * - request 63 is delayed by 6300ms
+	 *
+	 * and so on. After 15 minutes, the delay is reset to 0.
+	 */
+const apiLimiter = slowDown({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  delayAfter: 60, // Allow 60 requests per 1 minutes (as per 1 minute windowMs)
+  delayMs: (hits) => hits * 100, // Add 100 ms of delay to every request after the 60th one.
+});
+
+
 // General middleware
+app.use(apiLimiter); // Apply the delay middleware to all requests.
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
