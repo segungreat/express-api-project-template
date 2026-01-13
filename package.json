@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "concurrently --raw 'nodemon --exec tsx' 'tsc --watch --noEmit' ",
     "build": "tsc",
-    "dev2": "concurrently --raw 'tsx watch src/server.ts' 'tsc --watch --noEmit' "
+    "dev2": "concurrently --raw 'tsx watch src/server.ts' 'tsc --watch --noEmit' ",
+    "prisma:generate": "node ./prisma-merge.mjs && prisma generate"
   },
   "dependencies": {
+    "@prisma/adapter-mariadb": "^7.2.0",
     "@prisma/client": "^7.2.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
