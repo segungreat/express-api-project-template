@@ -10,9 +10,15 @@ import dotenv from "dotenv";
 // use default .env file on development
 dotenv.config();
 
+import { startDB } from "./database/db";
 import * as middlewares from "./middlewares/index";
 import * as routes from "./routes/index";
 
+
+// establish database connection
+startDB([
+	// You can add any service functions that need to run at startup here, li
+])
 
 // Create server instance
 const app: express.Express = express();
