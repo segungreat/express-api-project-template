@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "concurrently --raw 'nodemon --exec tsx' 'tsc --watch --noEmit' ",
     "build": "tsc",
-    "dev2": "concurrently --raw 'tsx watch src/server.ts' 'tsc --watch --noEmit' "
+    "dev2": "concurrently --raw 'tsx watch src/server.ts' 'tsc --watch --noEmit' ",
+    "lint": "eslint . --ext .ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -18,14 +19,17 @@
     "rotating-file-stream": "^3.2.7"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/morgan": "^1.9.10",
     "@types/node": "^25.0.6",
     "concurrently": "^9.2.1",
+    "eslint": "^9.39.2",
     "nodemon": "^3.1.11",
     "ts-node-dev": "^2.0.0",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.0"
   }
 }

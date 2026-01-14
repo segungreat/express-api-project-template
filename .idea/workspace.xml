@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08060005-9a61-437b-82d0-4230643f0902" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/database/db.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handlers/error.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/error.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/common.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,22 +28,22 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "segungreat"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;segungreat&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/segungreat/express-api-project-template.git",
-    "accountId": "b75ea640-9974-4aff-8b25-02d756014369"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/segungreat/express-api-project-template.git&quot;,
+    &quot;accountId&quot;: &quot;b75ea640-9974-4aff-8b25-02d756014369&quot;
   }
-}]]></component>
+}</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="php" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="38Cl1yDgmLwQ85XIbG3RwAX43rM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,13 +53,14 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "prisma",
+    "git-widget-placeholder": "feat-eslint",
     "last_opened_file_path": "/Users/cavidelmacbook1/Desktop/segun/nodeapp/express-api-project-setup",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/Users/cavidelmacbook1/Desktop/segun/nodeapp/express-api-project-setup/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -77,6 +81,8 @@
       <option name="presentableId" value="Default" />
       <updated>1768311222871</updated>
       <workItem from="1768311224414" duration="1745000" />
+      <workItem from="1768379469196" duration="894000" />
+      <workItem from="1768381768099" duration="2066000" />
     </task>
     <servers />
   </component>

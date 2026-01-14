@@ -39,7 +39,7 @@ class CustomError {
           this.error = body.error
      }
 
-     static badRequest(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static badRequest(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.BAD_REQUEST,
                statusMessage: 'Bad Request!',
@@ -49,7 +49,7 @@ class CustomError {
           } as ErrorConstructorBody)
      }
 
-     static unsuportedMediaTypeError(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static unsuportedMediaTypeError(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.UNSUPPORTED_MEDIA_TYPE,
                statusMessage: 'Unsupported Media Type',
@@ -59,7 +59,7 @@ class CustomError {
           } as ErrorConstructorBody)
      }
 
-     static paymentRequiredError(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static paymentRequiredError(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.PAYMENT_REQUIRED,
                statusMessage: 'Payment Required!',
@@ -69,7 +69,7 @@ class CustomError {
           } as ErrorConstructorBody)
      }
 
-     static notFound(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static notFound(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.NOT_FOUND,
                statusMessage: 'Not Found!',
@@ -79,7 +79,7 @@ class CustomError {
           } as ErrorConstructorBody)
      }
 
-     static unauthorizedRequest(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static unauthorizedRequest(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.UNAUTHORIZED,
                statusMessage: 'Unauthorized Request!',
@@ -89,7 +89,7 @@ class CustomError {
           } as ErrorConstructorBody)
      }
 
-     static continueRequest(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static continueRequest(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.CONTINUE,
                statusMessage: 'Continue!',
@@ -99,7 +99,7 @@ class CustomError {
           } as ErrorConstructorBody)
      }
 
-     static requestTimeout(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static requestTimeout(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.REQUEST_TIMEOUT,
                statusMessage: 'Request Timeout',
@@ -109,7 +109,7 @@ class CustomError {
           } as ErrorConstructorBody)
      }
 
-     static internalServerError(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static internalServerError(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.INTERNAL_SERVER_ERROR,
                statusMessage: 'Internal Server Error!',
@@ -119,7 +119,7 @@ class CustomError {
           } as ErrorConstructorBody)
      }
 
-     static forbiddenRequest(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static forbiddenRequest(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.FORBIDDEN,
                statusMessage: 'Forbidden Request',
@@ -129,7 +129,7 @@ class CustomError {
           } as ErrorConstructorBody)
      }
 
-     static serviceUnavailable(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static serviceUnavailable(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.SERVICE_UNAVAILABLE,
                statusMessage: 'Service Unavailable',
@@ -139,7 +139,7 @@ class CustomError {
           } as ErrorConstructorBody)
      }
 
-     static tooManyRequest(message: string, code?: CustomMessageCode, error?: { [key: string]: any }) {
+     static tooManyRequest(message: string, code?: CustomMessageCode, error?: { [key: string]: never }) {
           return new CustomError({
                statusCode: status.TOO_MANY_REQUESTS,
                statusMessage: 'Too many requests',

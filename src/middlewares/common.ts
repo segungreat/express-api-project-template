@@ -1,4 +1,4 @@
-import express, {Request, Response, NextFunction} from "express";
+import {Request, Response, NextFunction} from "express";
 import CustomError from "../handlers/error";
 
 export const setBaseUrl = function(req: Request, _res: Response, next: NextFunction) {
@@ -7,7 +7,9 @@ export const setBaseUrl = function(req: Request, _res: Response, next: NextFunct
 }
 
 export const bodyLogger = function(req: Request, _res: Response, next: NextFunction) {
-     const body = structuredClone(req.body)
+     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+     const body = structuredClone(req.body);
+     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
      if (body?.password) body.password = undefined;
      console.log("Body: ", req.body ?? {});
      console.log("Query: ", req.query ?? {});
